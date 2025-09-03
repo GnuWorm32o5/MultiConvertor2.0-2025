@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.multiconverter2025"
+    namespace = "com.example.multiconvertor20_2025"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.multiconverter2025"
+        applicationId = "com.example.multiconvertor20_2025"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

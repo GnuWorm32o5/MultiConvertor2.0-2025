@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MultiConverter2025"
+rootProject.name = "MultiConvertor2.0-2025"
 include(":app")

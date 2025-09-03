@@ -1,19 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backg2"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="500dp"
+        android:layout_height="250dp"
+        app:srcCompat="@drawable/ic_launcher_foreground"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="-62dp"
+       />
+
+
+    <TextView
+        android:id="@+id/firstText"
+        android:text="Please use youtube and its share link option to choose the video you would like to convert to another format."
+        android:textSize="20dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/jetbrains_mono_semibold"
+        android:maxLines="10"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/imageView"
+        android:layout_marginTop="-90dp"
+        android:shadowColor="#80000000"
+        android:shadowRadius="7"
+        android:shadowDx="15"
+        android:shadowDy="15"
+        />
+
+    <ImageButton
+        android:id="@+id/YTButton"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/firstText"
+        android:background="@drawable/youtube"
+        android:layout_marginTop="-10dp"
+
+        />
+
+     <TextView
+        android:id="@+id/secondText"
+        android:text="Now choose a site that will deliver a converting format accordingly."
+        android:textSize="20dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/jetbrains_mono_semibold"
+        android:maxLines="10"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/YTButton"
+        android:layout_marginTop="-25dp"
+         android:shadowColor="#80000000"
+         android:shadowRadius="7"
+         android:shadowDx="15"
+         android:shadowDy="15"
+         />
+</RelativeLayout>

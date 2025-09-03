@@ -1,4 +1,4 @@
-package com.example.multiconverter2025;
+package com.example.multiconvertor20_2025;
 
 import org.junit.Test;
 
