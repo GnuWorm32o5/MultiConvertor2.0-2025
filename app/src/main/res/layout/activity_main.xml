@@ -10,10 +10,11 @@
     tools:context=".MainActivity">
 
 
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="500dp"
-        android:layout_height="250dp"
+        android:layout_height="200dp"
         app:srcCompat="@drawable/ic_launcher_foreground"
         tools:layout_editor_absoluteX="30dp"
         tools:layout_editor_absoluteY="-62dp"
@@ -31,8 +32,8 @@
         android:layout_width="350dp"
         android:layout_height="150dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="-25dp"
         android:layout_below="@id/imageView"
-        android:layout_marginTop="-90dp"
         android:shadowColor="#80000000"
         android:shadowRadius="7"
         android:shadowDx="15"
@@ -40,13 +41,15 @@
         />
 
     <ImageButton
-        android:id="@+id/YTButton"
+        android:id="@+id/imagebutton1"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/firstText"
         android:background="@drawable/youtube"
         android:layout_marginTop="-10dp"
+        android:onClick="openLink"
+
 
         />
 
@@ -61,7 +64,7 @@
         android:layout_width="350dp"
         android:layout_height="150dp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/YTButton"
+        android:layout_below="@id/imagebutton1"
         android:layout_marginTop="-25dp"
          android:shadowColor="#80000000"
          android:shadowRadius="7"
@@ -80,6 +83,7 @@
         android:layout_marginTop="30dp"
         android:textColor="@color/white"
         android:fontFamily="@font/jetbrains_mono_semibold"
+        android:onClick="openLink"
 
         />
 
@@ -93,6 +97,7 @@
         android:layout_marginTop="30dp"
         android:textColor="@color/white"
         android:fontFamily="@font/jetbrains_mono_semibold"
+        android:onClick="openLink"
 
         />
 
@@ -106,10 +111,11 @@
         android:layout_marginTop="30dp"
         android:textColor="@color/white"
         android:fontFamily="@font/jetbrains_mono_semibold"
+        android:onClick="openLink"
         />
 
     <TextView
-        android:id="@+id/bottomText"
+        android:id="@+id/bottomtext"
         android:text="Made by Stevan Glavaški © 2025. "
         android:textSize="10dp"
         android:gravity="center"
@@ -120,12 +126,42 @@
         android:layout_height="150dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/button3"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="60dp"
         android:shadowColor="#80000000"
         android:shadowRadius="7"
         android:shadowDx="15"
         android:shadowDy="15"
+        android:onClick="openLink"
 
-    />
+
+
+        />
+
+
+
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/backbutton"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:text="Back"
+        android:textColor="@color/white"
+        android:fontFamily="@font/jetbrains_mono_semibold"
+        android:visibility="gone"
+        android:textSize="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@id/bottomtext"
+        android:onClick="goBack"
+        android:layout_margin="60dp"
+        />
+
+
 </RelativeLayout>
 

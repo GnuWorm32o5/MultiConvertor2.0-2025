@@ -1,30 +1,61 @@
 package com.example.multiconvertor20_2025;
 
-import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import android.net.Uri;
 import android.view.View;
-import android.widget.ImageButton;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.Button;
+import androidx.appcompat.app.AppCompatActivity;
+
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageButton button;
+    WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        button = findViewById(R.id.YTButton);
 
-        button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Uri uri = Uri.parse("https://www.youtube.com/");
-                Intent intent = new Intent(Intent.ACTION_VIEW,uri);
-                startActivity(intent);
-            }
-
-        });
+        webView = findViewById(R.id.webview);
+        webView.getSettings().setJavaScriptEnabled(true);   // dukljuci JS ako batre
+        webView.setWebViewClient(new WebViewClient());  // kljuc svega, keeps nav inside app logicno
     }
+
+    public void openLink(View view) {
+        String url = "";
+
+        if (view.getId() == R.id.imagebutton1) {
+            url = "https://www.youtube.com";
+        } else if (view.getId() == R.id.button1) {
+            url = "https://ytmp3.as/AOPR/";
+        } else if (view.getId() == R.id.button2) {
+            url = "https://www.online-convert.com/";
+        } else if (view.getId() == R.id.button3) {
+            url = "https://www.freeconvert.com/";
+        } else if (view.getId() == R.id.bottomtext) {
+            url = "https://stivsworld.unaux.com/index.html";
+        }
+
+        if (!url.isEmpty()) {
+            webView.loadUrl(url); // opens the link inside the app WebView
+            webView.setVisibility(view.VISIBLE);
+            webView.bringToFront();
+            webView.loadUrl(url);
+
+            Button backBtn = findViewById(R.id.backbutton);
+            backBtn.setVisibility(View.VISIBLE);
+            backBtn.bringToFront();
+        }
+    }
+
+    public void goBack(View view) {
+        if(webView.canGoBack()) {
+            webView.goBack();
+        } else {
+            webView.setVisibility(view.GONE);
+            view.setVisibility(view.GONE);
+        }
+    }
+
 }
