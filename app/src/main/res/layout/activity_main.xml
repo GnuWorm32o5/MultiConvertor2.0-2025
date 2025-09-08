@@ -22,8 +22,8 @@
 
     <TextView
         android:id="@+id/firstText"
-        android:text="Please use youtube and its share link option to choose the video you would like to convert to another format."
-        android:textSize="20dp"
+        android:text="Quick guide: Copy and paste a link from youtube to convert videos using the first option, or just pick a file from your device using the other two versatile converting links."
+        android:textSize="15dp"
         android:gravity="center"
         android:textColor="@color/white"
         android:fontFamily="@font/jetbrains_mono_semibold"
@@ -52,8 +52,8 @@
 
      <TextView
         android:id="@+id/secondText"
-        android:text="Now choose a site that will deliver a converting format accordingly."
-        android:textSize="20dp"
+        android:text="Note: You will be redirected to other websites using this shortcut app."
+        android:textSize="15dp"
         android:gravity="center"
         android:textColor="@color/white"
         android:fontFamily="@font/jetbrains_mono_semibold"
@@ -67,5 +67,65 @@
          android:shadowRadius="7"
          android:shadowDx="15"
          android:shadowDy="15"
+
          />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/secondText"
+        android:text="ytmp3.as - Youtube to Mp3/Mp4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/jetbrains_mono_semibold"
+
+        />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:text="Online-Convert.com - Versatile file converter"
+        android:layout_below="@id/button1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/jetbrains_mono_semibold"
+
+        />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:text="FreeConvert - Versatile file converter"
+        android:layout_below="@id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/jetbrains_mono_semibold"
+        />
+
+    <TextView
+        android:id="@+id/bottomText"
+        android:text="Made by Stevan Glavaški © 2025. "
+        android:textSize="10dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/jetbrains_mono_semibold"
+        android:maxLines="10"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/button3"
+        android:layout_marginTop="70dp"
+        android:shadowColor="#80000000"
+        android:shadowRadius="7"
+        android:shadowDx="15"
+        android:shadowDy="15"
+
+    />
 </RelativeLayout>
+
