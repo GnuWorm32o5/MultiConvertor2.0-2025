@@ -11,19 +11,23 @@
 
 
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="500dp"
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/myAnimation"
+        android:layout_width="200dp"
         android:layout_height="200dp"
-        app:srcCompat="@drawable/ic_launcher_foreground"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="-62dp"
-       />
+        android:layout_centerHorizontal="true"
+        app:lottie_rawRes="@raw/cube"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_speed="0.2"
+
+        />
 
 
     <TextView
         android:id="@+id/firstText"
-        android:text="Quick guide: Copy and paste a link from youtube to convert videos using the first option, or just pick a file from your device using the other two versatile converting links."
+        android:text="Quick guide: Copy and paste a link from youtube to convert videos using the first option, or just pick a file from your device using the other two versatile converting links and make your raw crystal into a jewel."
         android:textSize="15dp"
         android:gravity="center"
         android:textColor="@color/white"
@@ -32,13 +36,17 @@
         android:layout_width="350dp"
         android:layout_height="150dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="-25dp"
-        android:layout_below="@id/imageView"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/myAnimation"
         android:shadowColor="#80000000"
         android:shadowRadius="7"
         android:shadowDx="15"
         android:shadowDy="15"
         />
+
+
+
+
 
     <ImageButton
         android:id="@+id/imagebutton1"
@@ -46,38 +54,18 @@
         android:layout_height="75dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/firstText"
-        android:background="@drawable/youtube"
-        android:layout_marginTop="-10dp"
+        android:background="@drawable/youtube1"
         android:onClick="openLink"
+        android:tooltipText="Clickable"
 
 
         />
-
-     <TextView
-        android:id="@+id/secondText"
-        android:text="Note: You will be redirected to other websites using this shortcut app."
-        android:textSize="15dp"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:fontFamily="@font/jetbrains_mono_semibold"
-        android:maxLines="10"
-        android:layout_width="350dp"
-        android:layout_height="150dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/imagebutton1"
-        android:layout_marginTop="-25dp"
-         android:shadowColor="#80000000"
-         android:shadowRadius="7"
-         android:shadowDx="15"
-         android:shadowDy="15"
-
-         />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="300dp"
         android:layout_height="70dp"
-        android:layout_below="@id/secondText"
+        android:layout_below="@id/imagebutton1"
         android:text="ytmp3.as - Youtube to Mp3/Mp4"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
@@ -114,8 +102,29 @@
         android:onClick="openLink"
         />
 
+
+
     <TextView
-        android:id="@+id/bottomtext"
+        android:id="@+id/bottomtext1"
+        android:text="Note: You will be redirected to other websites using this shortcut app."
+        android:textSize="15dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/jetbrains_mono_semibold"
+        android:maxLines="10"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/button3"
+        android:layout_marginTop="10dp"
+        android:shadowColor="#80000000"
+        android:shadowRadius="7"
+        android:shadowDx="15"
+        android:shadowDy="15"
+        />
+
+    <TextView
+        android:id="@+id/bottomtext2"
         android:text="Made by Stevan Glavaški © 2025. "
         android:textSize="10dp"
         android:gravity="center"
@@ -125,16 +134,13 @@
         android:layout_width="350dp"
         android:layout_height="150dp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/button3"
-        android:layout_marginTop="60dp"
+        android:layout_below="@id/bottomtext1"
+        android:layout_marginTop="10dp"
         android:shadowColor="#80000000"
         android:shadowRadius="7"
         android:shadowDx="15"
         android:shadowDy="15"
         android:onClick="openLink"
-
-
-
         />
 
 
@@ -157,7 +163,7 @@
         android:visibility="gone"
         android:textSize="25dp"
         android:layout_centerHorizontal="true"
-        android:layout_alignBottom="@id/bottomtext"
+        android:layout_alignBottom="@id/bottomtext2"
         android:onClick="goBack"
         android:layout_margin="60dp"
         />

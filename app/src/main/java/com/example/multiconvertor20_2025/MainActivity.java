@@ -1,11 +1,14 @@
 package com.example.multiconvertor20_2025;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
+import com.airbnb.lottie.LottieAnimationView;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -22,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         webView.setWebViewClient(new WebViewClient());  // kljuc svega, keeps nav inside app logicno
     }
 
+
+
     public void openLink(View view) {
         String url = "";
 
@@ -33,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             url = "https://www.online-convert.com/";
         } else if (view.getId() == R.id.button3) {
             url = "https://www.freeconvert.com/";
-        } else if (view.getId() == R.id.bottomtext) {
+        } else if (view.getId() == R.id.bottomtext2) {
             url = "https://stivsworld.unaux.com/index.html";
         }
 
@@ -49,13 +54,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
     public void goBack(View view) {
-        if(webView.canGoBack()) {
-            webView.goBack();
-        } else {
-            webView.setVisibility(view.GONE);
-            view.setVisibility(view.GONE);
-        }
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
+
 
 }

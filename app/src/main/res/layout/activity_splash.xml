@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/backg2">
+
+    <TextView
+        android:id="@+id/lottieTextHead"
+        android:layout_width="350dp"
+        android:layout_height="187dp"
+        android:layout_above="@id/lottieAnimationView"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/jetbrains_mono_semibold"
+        android:gravity="center"
+        android:maxLines="10"
+        android:shadowColor="#80000000"
+        android:shadowDx="15"
+        android:shadowDy="15"
+        android:shadowRadius="7"
+        android:text="Crystal Conversion 1.0"
+        android:textColor="@color/white"
+        android:textSize="30dp" />
+
+
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="400dp"
+        android:layout_height="450dp"
+        app:lottie_rawRes="@raw/crystal_cube"
+        app:lottie_autoPlay="true"
+        app:lottie_repeatCount="2"
+        app:lottie_speed="1"
+        />
+
+
+
+
+
+
+</LinearLayout>
