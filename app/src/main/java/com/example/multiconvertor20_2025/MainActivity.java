@@ -9,6 +9,8 @@ import android.webkit.WebViewClient;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import com.airbnb.lottie.LottieAnimationView;
+import androidx.activity.OnBackPressedCallback;
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     public void openLink(View view) {
         String url = "";
 
-        if (view.getId() == R.id.imagebutton1) {
+        if (view.getId() == R.id.button0) {
             url = "https://www.youtube.com";
         } else if (view.getId() == R.id.button1) {
             url = "https://ytmp3.as/AOPR/";
@@ -60,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+
 
 
 }

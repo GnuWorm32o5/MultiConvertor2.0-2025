@@ -6,57 +6,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/backg2"
+    android:background="@drawable/beige3"
     tools:context=".MainActivity">
 
 
 
 
+
+
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/myAnimation"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_centerHorizontal="true"
-        app:lottie_rawRes="@raw/cube"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="false"
-        app:lottie_speed="0.2"
-
-        />
-
-
-    <TextView
-        android:id="@+id/firstText"
-        android:text="Quick guide: Copy and paste a link from youtube to convert videos using the first option, or just pick a file from your device using the other two versatile converting links and make your raw crystal into a jewel."
-        android:textSize="15dp"
+        android:id="@+id/firstAnimation"
         android:gravity="center"
-        android:textColor="@color/white"
-        android:fontFamily="@font/jetbrains_mono_semibold"
-        android:maxLines="10"
         android:layout_width="350dp"
         android:layout_height="150dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:layout_below="@id/myAnimation"
-        android:shadowColor="#80000000"
-        android:shadowRadius="7"
-        android:shadowDx="15"
-        android:shadowDy="15"
+        app:lottie_rawRes="@raw/trransform"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        app:lottie_speed="0.2"
+        android:alpha="0.9"
+
+
         />
 
 
 
 
 
-    <ImageButton
-        android:id="@+id/imagebutton1"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+    <Button
+        android:id="@+id/button0"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/firstAnimation"
+        android:text="Youtube.com"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/firstText"
-        android:background="@drawable/youtube1"
+        android:layout_marginTop="50dp"
+        android:textColor="#0D160B"
+        android:fontFamily="@font/rubik2"
         android:onClick="openLink"
-        android:tooltipText="Clickable"
+        app:backgroundTint="#AA9091"
+        android:alpha="0.9"
+
 
 
         />
@@ -65,13 +56,16 @@
         android:id="@+id/button1"
         android:layout_width="300dp"
         android:layout_height="70dp"
-        android:layout_below="@id/imagebutton1"
-        android:text="ytmp3.as - Youtube to Mp3/Mp4"
+        android:layout_below="@id/button0"
+        android:text="Youtube videos to Mp3/Mp4"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:textColor="@color/white"
-        android:fontFamily="@font/jetbrains_mono_semibold"
+        android:layout_marginTop="50dp"
+        android:textColor="#0D160B"
+        android:fontFamily="@font/rubik2"
         android:onClick="openLink"
+        app:backgroundTint="#C5CDD3"
+        android:alpha="0.9"
+
 
         />
 
@@ -79,13 +73,17 @@
         android:id="@+id/button2"
         android:layout_width="300dp"
         android:layout_height="70dp"
-        android:text="Online-Convert.com - Versatile file converter"
+        android:text="Images, video, documents, audio and more to other formats converter"
         android:layout_below="@id/button1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:textColor="@color/white"
-        android:fontFamily="@font/jetbrains_mono_semibold"
+        android:layout_marginTop="50dp"
+        android:textColor="#0D160B"
+        android:fontFamily="@font/rubik2"
         android:onClick="openLink"
+        app:backgroundTint="#C5CDD3"
+        android:alpha="0.9"
+
+
 
         />
 
@@ -93,53 +91,50 @@
         android:id="@+id/button3"
         android:layout_width="300dp"
         android:layout_height="70dp"
-        android:text="FreeConvert - Versatile file converter"
+        android:text="Convert any file to another format"
         android:layout_below="@id/button2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:textColor="@color/white"
-        android:fontFamily="@font/jetbrains_mono_semibold"
+        android:layout_marginTop="50dp"
+        android:textColor="#0D160B"
+        android:fontFamily="@font/rubik2"
         android:onClick="openLink"
+        app:backgroundTint="#C5CDD3"
+        android:alpha="0.9"
+
+
         />
 
 
 
     <TextView
         android:id="@+id/bottomtext1"
-        android:text="Note: You will be redirected to other websites using this shortcut app."
+        android:text="Quick guide: Copy and paste a link from youtube to convert videos using the first option, or just pick a file from your device using the other two versatile converting links and make your raw crystal into a jewel. Note: You will be redirected to other websites using this app."
         android:textSize="15dp"
         android:gravity="center"
-        android:textColor="@color/white"
-        android:fontFamily="@font/jetbrains_mono_semibold"
+        android:textColor="#0D160B"
+        android:fontFamily="@font/rubik2"
         android:maxLines="10"
         android:layout_width="350dp"
         android:layout_height="150dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/button3"
         android:layout_marginTop="10dp"
-        android:shadowColor="#80000000"
-        android:shadowRadius="7"
-        android:shadowDx="15"
-        android:shadowDy="15"
+
         />
 
     <TextView
         android:id="@+id/bottomtext2"
-        android:text="Made by Stevan Glavaški © 2025. "
+        android:text="Made by Stevan Glavaški © 2025."
         android:textSize="10dp"
         android:gravity="center"
-        android:textColor="@color/white"
-        android:fontFamily="@font/jetbrains_mono_semibold"
+        android:textColor="#0D160B"
+        android:fontFamily="@font/rubik2"
         android:maxLines="10"
         android:layout_width="350dp"
         android:layout_height="150dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/bottomtext1"
-        android:layout_marginTop="10dp"
-        android:shadowColor="#80000000"
-        android:shadowRadius="7"
-        android:shadowDx="15"
-        android:shadowDy="15"
+        android:layout_marginTop="70dp"
         android:onClick="openLink"
         />
 
@@ -157,15 +152,16 @@
         android:id="@+id/backbutton"
         android:layout_width="150dp"
         android:layout_height="100dp"
-        android:text="Back"
-        android:textColor="@color/white"
-        android:fontFamily="@font/jetbrains_mono_semibold"
+        android:text="Go Back"
+        android:fontFamily="@font/rubik2"
         android:visibility="gone"
-        android:textSize="25dp"
+        android:textSize="20dp"
         android:layout_centerHorizontal="true"
         android:layout_alignBottom="@id/bottomtext2"
         android:onClick="goBack"
+        android:textColor="#0D160B"
         android:layout_margin="60dp"
+        app:backgroundTint="#C5CDD3"
         />
 
 
