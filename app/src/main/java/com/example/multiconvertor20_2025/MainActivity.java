@@ -1,21 +1,19 @@
 package com.example.multiconvertor20_2025;
-
+import androidx.activity.OnBackPressedCallback;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
-import com.airbnb.lottie.LottieAnimationView;
-import androidx.activity.OnBackPressedCallback;
 
 
 
 public class MainActivity extends AppCompatActivity {
 
     WebView webView;
+    Button backBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         webView = findViewById(R.id.webview);
+        backBtn = findViewById(R.id.backbutton);
+
         webView.getSettings().setJavaScriptEnabled(true);   // dukljuci JS ako batre
         webView.setWebViewClient(new WebViewClient());  // kljuc svega, keeps nav inside app logicno
     }
@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
             webView.bringToFront();
             webView.loadUrl(url);
 
-            Button backBtn = findViewById(R.id.backbutton);
             backBtn.setVisibility(View.VISIBLE);
             backBtn.bringToFront();
         }
@@ -58,12 +57,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void goBack(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+     webView.setVisibility(View.GONE);
+     backBtn.setVisibility(View.GONE);
     }
-
-
 
 
 }
